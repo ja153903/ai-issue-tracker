@@ -1,11 +1,13 @@
-import { issues, statusLabels } from './issues';
+import { issues, statusLabels } from "./issues";
 
 export default function App() {
   return (
     <div className="app-shell">
       <header className="topbar">
         <a className="brand" href="/" aria-label="Workbench home">
-          <span className="brand-mark" aria-hidden="true">w</span>
+          <span className="brand-mark" aria-hidden="true">
+            w
+          </span>
           Workbench
         </a>
         <span className="workspace-name">Product workspace</span>
@@ -39,12 +41,18 @@ export default function App() {
                   </div>
                   <p className="issue-description">{issue.description}</p>
                   <div className="issue-meta">
-                    <span className={`status-label status-${issue.status}`}>{statusLabels[issue.status]}</span>
-                    <span className="meta-divider" aria-hidden="true">·</span>
-                    <span>{issue.assignee ?? 'Unassigned'}</span>
+                    <span className={`status-label status-${issue.status}`}>
+                      {statusLabels[issue.status]}
+                    </span>
+                    <span className="meta-divider" aria-hidden="true">
+                      ·
+                    </span>
+                    <span>{issue.assignee ?? "Unassigned"}</span>
                   </div>
                 </div>
-                <span className={`priority priority-${issue.priority}`}>{issue.priority} priority</span>
+                <span className={`priority priority-${issue.priority}`}>
+                  {issue.priority} priority
+                </span>
               </li>
             ))}
           </ul>

@@ -39,9 +39,12 @@ Aim to finish the core behavior within 30–35 minutes. We will reserve time to 
 ## Check your work
 
 ```sh
+npm run fmt:check
 npm run typecheck
 npm run build
 ```
+
+Run `npm run fmt` to format the code with Oxfmt.
 
 Also check behavior in the browser. There is no preconfigured test runner; you may add tests if they help you demonstrate correctness.
 
